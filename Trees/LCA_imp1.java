@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class LCA_imp1 {
 
-    static void findLCA(Node root,int val1,int val2)
+    static void findLCA(TreeNode root,int val1,int val2)
     {
-        ArrayList <Node> path1 = new ArrayList<>();
-        ArrayList <Node> path2 = new ArrayList<>();
+        ArrayList <TreeNode> path1 = new ArrayList<>();
+        ArrayList <TreeNode> path2 = new ArrayList<>();
 
         if(findPath(root, val1, path1) && findPath(root, val2, path2))
         {
@@ -25,7 +25,7 @@ public class LCA_imp1 {
 
     }
 
-    static boolean findPath(Node node,int val,ArrayList <Node> path)
+    static boolean findPath(TreeNode node,int val,ArrayList <TreeNode> path)
     {
         if(node==null)
         {
@@ -50,17 +50,17 @@ public class LCA_imp1 {
     }
     public static void main(String[] args) {
         
-        Node root = new Node(70);
-        root.left = new Node(20);
-        root.right = new Node(30);
-        root.left.left = new Node(50);
-        root.left.right = new Node(10);
-        root.left.left.left = new Node(60);
-        root.left.left.right = new Node(40);
-        root.left.right.right = new Node(80);
-        root.left.right.right.right = new Node(100);
-        root.left.left.left.left = new Node(90);
-        root.left.left.right.right = new Node(110);
+        TreeNode root = new TreeNode(70);
+        root.left = new TreeNode(20);
+        root.right = new TreeNode(30);
+        root.left.left = new TreeNode(50);
+        root.left.right = new TreeNode(10);
+        root.left.left.left = new TreeNode(60);
+        root.left.left.right = new TreeNode(40);
+        root.left.right.right = new TreeNode(80);
+        root.left.right.right.right = new TreeNode(100);
+        root.left.left.left.left = new TreeNode(90);
+        root.left.left.right.right = new TreeNode(110);
 
         /* 
         ArrayList <Node> path1 = new ArrayList<>();

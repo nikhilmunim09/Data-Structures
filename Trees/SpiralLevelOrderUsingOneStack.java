@@ -6,24 +6,24 @@ class SpiralLevelOrderUsingOneStack {
 
     public static void main(String[] args) {
         
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.right.left = new Node(6);
-        root.right.right = new Node(7);
-        root.left.left.left = new Node(8);
-        root.left.right.right = new Node(9);
-        root.right.left.right = new Node(10);
-        root.left.right.right.left = new Node(11);
-        root.right.left.right.right = new Node(12);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
+        root.left.left.left = new TreeNode(8);
+        root.left.right.right = new TreeNode(9);
+        root.right.left.right = new TreeNode(10);
+        root.left.right.right.left = new TreeNode(11);
+        root.right.left.right.right = new TreeNode(12);
         
         spiralLevelOrder(root);
        
     }
 
-    public static void spiralLevelOrder(Node root)
+    public static void spiralLevelOrder(TreeNode root)
     {
         if(root==null)
         {
@@ -31,8 +31,8 @@ class SpiralLevelOrderUsingOneStack {
         }
 
         Boolean l_to_r = true;
-        Queue <Node> q = new LinkedList<>();
-        Stack <Node> s = new Stack<>();
+        Queue <TreeNode> q = new LinkedList<>();
+        Stack <TreeNode> s = new Stack<>();
 
         q.add(root);
 
@@ -43,7 +43,7 @@ class SpiralLevelOrderUsingOneStack {
             {
                 for(int i = 0 ; i < size ; i++)
                 {
-                    Node temp = q.poll();
+                    TreeNode temp = q.poll();
                     System.out.print(temp.data+" ");
                     if(temp.left!=null)
                     {
@@ -60,7 +60,7 @@ class SpiralLevelOrderUsingOneStack {
             {
                 for(int i = 0 ; i < size ; i++)
                 {
-                    Node temp = q.poll();
+                    TreeNode temp = q.poll();
                     if(temp.left!=null)
                     {
                         q.offer(temp.left);

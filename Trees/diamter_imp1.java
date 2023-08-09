@@ -1,6 +1,6 @@
 public class diamter_imp1 {
 
-    public static int height(Node node)
+    public static int height(TreeNode node)
     {
         if(node==null)
         {
@@ -9,7 +9,7 @@ public class diamter_imp1 {
 
         return (Integer.max(height(node.left),height(node.right)))+1;
     }
-    public static int diameter(Node root)
+    public static int diameter(TreeNode root)
     {
         if(root==null)
         {
@@ -25,16 +25,16 @@ public class diamter_imp1 {
 
     public static void main(String[] args) {
         
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.left.left.left = new Node(6);
-        root.left.left.right = new Node(7);
-        root.left.right.right = new Node(8);
-        root.left.left.left.left = new Node(9);
-        root.left.right.right.right = new Node(10);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.left.left.left = new TreeNode(6);
+        root.left.left.right = new TreeNode(7);
+        root.left.right.right = new TreeNode(8);
+        root.left.left.left.left = new TreeNode(9);
+        root.left.right.right.right = new TreeNode(10);
         
         System.out.println(diameter(root));
     }

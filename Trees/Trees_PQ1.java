@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Trees_PQ1 {
-    public static ArrayList<Integer> inOrder(Node root)
+    public static ArrayList<Integer> inOrder(TreeNode root)
     {
         
         ArrayList <Integer> list = new ArrayList<>();
@@ -12,8 +12,8 @@ public class Trees_PQ1 {
             return list;
         }
 
-        Stack <Node> s = new Stack<>();
-        Node temp = root;
+        Stack <TreeNode> s = new Stack<>();
+        TreeNode temp = root;
         while(temp!=null || !s.isEmpty())
         {
             //adding element untill the node has left child.
@@ -39,15 +39,15 @@ public class Trees_PQ1 {
     }
 
     public static void main(String[] args) {
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.right.right = new Node(6);
-        root.right.right.left = new Node(7);
-        root.right.right.right = new Node(9);
-        root.right.right.right.right = new Node(10);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.right = new TreeNode(6);
+        root.right.right.left = new TreeNode(7);
+        root.right.right.right = new TreeNode(9);
+        root.right.right.right.right = new TreeNode(10);
 
         
         ArrayList <Integer> list = new ArrayList<>();

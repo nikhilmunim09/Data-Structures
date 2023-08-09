@@ -1,6 +1,6 @@
 public class PrintNodesAtDistanceK {
     
-    public static void printDown(Node node,int k)
+    public static void printDown(TreeNode node,int k)
     {
         if(node==null)
         {
@@ -16,7 +16,7 @@ public class PrintNodesAtDistanceK {
         printDown(node.right,k);
     }
 
-    public static int printAtK(Node node,int target ,int k)
+    public static int printAtK(TreeNode node,int target ,int k)
     {
         if(node==null)
         {
@@ -52,15 +52,15 @@ public class PrintNodesAtDistanceK {
 
     public static void main(String[] args) {
         
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.right.right = new Node(6);
-        root.right.right.left = new Node(7);
-        root.right.right.right = new Node(8);
-        root.right.right.right.right = new Node(9);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.right = new TreeNode(6);
+        root.right.right.left = new TreeNode(7);
+        root.right.right.right = new TreeNode(8);
+        root.right.right.right.right = new TreeNode(9);
 
         printAtK(root, 5 , 5);
     }

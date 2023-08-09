@@ -1,4 +1,14 @@
-public class MaxElement {
+public class MaxDepth{
+
+    public static int maxDepth(TreeNode node)
+    {
+        if(node==null)
+        {
+            return 0;
+        }
+
+        return (Integer.max(maxDepth(node.left), maxDepth(node.right)) + 1);
+    }
 
     public static void main(String[] args) {
         
@@ -12,15 +22,8 @@ public class MaxElement {
         root.right.right.right = new TreeNode(9);
         root.right.right.right.right = new TreeNode(10);
 
-        System.out.println("Max element of the Tree is : "+maxElement(root));
-        
+        System.out.println(maxDepth(root));
     }
-    public static int maxElement(TreeNode node)
-    {
-        if(node==null)
-        {
-            return Integer.MIN_VALUE;
-        }
-        return Integer.max(node.data,Integer.max(maxElement(node.left),maxElement(node.right)));
-    }
+
+
 }
