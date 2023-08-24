@@ -1,34 +1,38 @@
-public class FloorInBST {
-    public static TreeNode floor(TreeNode node,int value)
+public class CeilBST {
+    
+    public static TreeNode ceil(TreeNode node,int value)
     {
-        TreeNode floor = null;
+        TreeNode ceil = null;
 
         TreeNode temp = node;
 
         while(temp!=null)
         {
             //checking if floor is null then it means smaller data is not found yet.
-            if(floor==null)
+            if(ceil==null)
             {
-                if(temp.data<=value)
+                if(temp.data>=value)
                 {
-                    floor = temp;
+                    ceil = temp;
+                    System.out.println("Now ceil is : "+ceil.data);
                 }
             }
-            else 
+            if(ceil!=null) 
             {
-                if(temp.data>floor.data && temp.data<=value)
+                if(temp.data>=value && temp.data<ceil.data)
                 {
-                    floor = temp;
+                    ceil = temp;
+                    System.out.println("Now ceil is : "+ceil.data);
                 }
             }
-            if(value<temp.data)
-            {
-                temp = temp.left;
-            }
-            else if(value>temp.data)
+            
+            if(value>temp.data)
             {
                 temp = temp.right;
+            }
+            else if(value<temp.data)
+            {
+                temp = temp.left;
             }
             else 
             {
@@ -37,8 +41,7 @@ public class FloorInBST {
             }
         }
 
-        return floor;
-
+        return ceil;
     }
 
     public static void main(String[] args) {
@@ -51,7 +54,7 @@ public class FloorInBST {
         root.right.left = new TreeNode(80);
         root.right.right = new TreeNode(110);
 
-        System.out.println(floor(root,100).data);
+        System.out.println(ceil(root,75).data);
 
     }
 }

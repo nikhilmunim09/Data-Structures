@@ -2,10 +2,13 @@ class TreeNode {
     int data;
     TreeNode left;
     TreeNode right;
+    int lcount;
+
     TreeNode(int data)
     {
         this.data = data;
         left = right = null;
+        lcount = 0;
     }
 }
 

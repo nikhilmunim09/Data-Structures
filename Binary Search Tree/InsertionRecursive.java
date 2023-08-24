@@ -20,6 +20,7 @@ public class InsertionRecursive {
         else 
         {
             node.left = insertionRecursive(node.left, value);
+            node.lcount++;
         }
 
         return node;

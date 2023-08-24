@@ -22,6 +22,7 @@ public class InsertionIterative
             }
             else if(value<temp.data)
             {
+                temp.lcount++;
                 temp = temp.left;
             }
             else 
